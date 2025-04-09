@@ -1,0 +1,587 @@
+* {
+    margin: 0; /* Menghilangkan margin default */
+    padding: 0; /* Menghilangkan padding default */
+    box-sizing: border-box; /* Padding dan border tidak mempengaruhi ukuran total elemen */
+    font-family: Arial, sans-serif; /* Menggunakan font Arial atau sans-serif jika Arial tidak tersedia */
+}
+
+body {
+    background-color: black; /* Mengatur latar belakang menjadi hitam */
+    color: white; /* Warna teks menjadi putih */
+    display: flex; /* Menggunakan Flexbox untuk mengatur layout */
+    justify-content: center; /* Pusatkan konten secara horizontal */
+    padding: 10px; /* Tambahkan ruang kosong di sekitar body */
+}
+
+.wrapper {
+    display: flex; /* Susun elemen dalam satu baris */
+    align-items: flex-start; /* Sejajarkan di bagian atas */
+}
+
+.container {
+    width: 80px; /* Lebar sidebar ikon */
+    display: flex; /* Gunakan Flexbox */
+    flex-direction: column; /* Susun ikon ke bawah */
+    align-items: center; /* Tengahkan ikon */
+    gap: 40px; /* Beri jarak antar ikon */
+    padding: 30px; /* Tambahkan ruang di dalam container */
+    margin-top: 20px; /* Geser container ke bawah */
+    margin-right: -135px; /* Geser container lebih ke kiri */
+}
+
+.container img {
+    width: 30px;   /* Sesuaikan ukuran lebar */
+    height: auto;  /* Biarkan tinggi menyesuaikan proporsi aslinya */
+    transform: translateX(5px); /* Geser ikon ke kiri */
+}
+
+.postBTN {
+    border: 1px solid white; /* Tambahkan border putih */
+    font-weight: bold; /* Tebalkan teks */
+    border-radius: 40px; /* Membuat tombol berbentuk oval */
+    width: 150px; /* Lebar tombol */
+    height: 40px; /* Tinggi tombol */
+}
+
+#pfp {
+    width: 45px; /* Ukuran foto profil kecil */
+    height: 45px; /* Ukuran foto profil kecil */
+    position: absolute; /* Posisikan secara absolut */
+    bottom: 103px; /* Geser ke atas */
+    left: 70px; /* Geser ke kiri */
+    border-radius: 50px; /* Membuat gambar menjadi bundar */
+    object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+}
+
+.nickname {
+    color: inherit; /* Warna teks mengikuti warna induk */
+    margin-left: 40px; /* Geser teks ke kanan */
+    margin-top: -20px; /* Geser teks ke atas */
+}
+
+.usrnm {
+    color: #808080; /* Warna teks abu-abu */
+    margin-left: 60px; /* Geser teks ke kanan */
+    margin-top: -35px; /* Geser teks ke atas */
+}
+
+.profile-container {
+    display: flex; /* Gunakan Flexbox */
+    align-items: center; /* Sejajarkan secara vertikal */
+    gap: 20px; /* Beri jarak antara foto profil dan teks */
+}
+
+.profile-pic {
+    width: 80px; /* Sesuaikan ukuran */
+    height: 80px; /* Sesuaikan ukuran */
+    border-radius: 50px; /* Agar tetap bulat */
+    object-fit: cover; /* Pastikan gambar tidak terdistorsi */
+    border: 3px solid black; /* Opsional: Tambahkan border */
+    margin-top: -40px; /* Geser ke atas */
+}
+
+
+.profile-name {
+    display: flex;
+    flex-direction: column;
+    color: inherit;
+}
+
+.profile-name strong {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.post-count {
+    font-size: 13px;
+    color: #aaa;
+}
+
+/* Main Content */
+.main-content {
+    width: 800px; /* Lebar area utama */
+    padding: 0px; /* Hilangkan padding */
+    transform: translateX(250px); /* Geser ke kiri */
+    border-left: 1px solid gray; /* Tambahkan garis kiri */
+    border-right: 1px solid gray; /* Tambahkan garis kanan */
+    min-height: 100vh; 
+}
+
+/* Header */
+.header {
+    position: relative; /* Elemen relatif terhadap parent */
+}
+
+.profile-header {
+    display: flex; /* Gunakan Flexbox */
+    align-items: center; /* Pusatkan secara vertikal */
+    position: absolute; /* Posisikan secara absolut */
+    top: 0; /* Letakkan di atas */
+    left: 0; /* Letakkan di kiri */
+    width: 799px; /* Lebar header */
+    background: black; /* Latar belakang hitam */
+    padding: 10px 15px; /* Tambahkan padding */
+    color: inherit; /* Warna mengikuti elemen induk */
+    height: 40px; /* Tinggi header */
+}
+
+.back-btn {
+    font-size: 18px; /* Ukuran ikon tombol kembali */
+    cursor: pointer; /* Ubah kursor menjadi pointer */
+    color: inherit; /* Warna mengikuti induk */
+    margin-right: 10px; /* Tambahkan jarak ke kanan */
+}
+
+.profile-name {
+    display: flex;
+    flex-direction: column;
+    color: inherit;
+}
+
+.profile-name strong {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.post-count {
+    font-size: 13px;
+    color: #aaa;
+}
+
+.cover {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+    border: 4px solid black;
+    position: absolute;
+    bottom: -40px;
+    left: 20px;
+}
+
+.profile-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Mengubah dari center ke flex-start agar tombol naik */
+    padding: 40px 20px 10px; /* Kurangi padding atas */
+}
+
+.profile-details h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.profile-details p {
+    margin-bottom: 6px;
+}
+
+.edit-profile {
+    background-color: transparent; /* Buat tombol transparan */
+    border: 1px solid white; /* Tambahkan border putih */
+    color: inherit; /* Warna mengikuti induk */
+    padding: 8px 15px; /* Tambahkan ruang dalam tombol */
+    cursor: pointer; /* Ubah kursor menjadi pointer */
+    border-radius: 20px; /* Buat sudut tombol membulat */
+    font-size: 14px; /* Ukuran teks */
+    font-weight: bold; /* Tebalkan teks */
+    position: relative; /* Posisi relatif */
+    top: -10px; /* Geser tombol ke atas */
+}
+
+/* Tabs */
+.tabs {
+    display: flex; /* Gunakan Flexbox */
+    justify-content: space-around; /* Atur tab secara merata */
+    padding: 10px; /* Tambahkan ruang */
+    border-bottom: 1px solid gray; /* Tambahkan garis bawah */
+}
+
+.tabs span {
+    cursor: pointer; /* Ubah kursor menjadi pointer */
+    padding: 8px; /* Tambahkan ruang */
+}
+
+.tabs .active {
+    border-bottom: 2px solid white; /* Garis bawah pada tab aktif */
+}
+
+/* Container untuk semua post */
+.posts {
+    border-left: 1px solid #444;
+    border-right: 1px solid #444;
+    padding: 10px 0;
+    background-color: #000;
+}
+
+/* Setiap post */
+.post {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 20px 16px;
+    background-color: #16181c;
+    margin-bottom: 10px;  /* Jarak antar post */
+    border-radius: 10px;
+    min-height: 80px; /* tambahkan tinggi minimum */
+}
+
+/* Profil pic di setiap post */
+.post-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 80%;
+}
+
+/* Konten teks dalam post */
+.post-content {
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+
+.post-pic {
+    width: 48px;
+    height: 48px;
+    border-radius: 10%;
+}
+
+.pinned {
+    background-color: #18191d;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.pinned .post-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    margin-right: 8px;
+}
+
+/* Modal Background */
+.modal {
+    display: none; /* Sembunyikan modal awalnya */
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #000;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 500px;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+/* Textarea */
+.modal-content textarea {
+    background-color: #16181c;
+    border: 1px solid gray;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    resize: none;
+    font-size: 16px;
+}
+
+/* Post Button */
+.send-post {
+    align-self: flex-end;
+    background-color: white;
+    color: black;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* Right Sidebar */
+.right-sidebar {
+    margin-left: 150px; /* Geser ke kanan */
+    float: right; /* Posisikan ke kanan */
+    display: flex; /* Gunakan Flexbox */
+    flex-direction: column; /* Susun elemen ke bawah */
+    align-items: flex-end; /* Ratakan ke kanan */
+    width: 450px; /* Tentukan lebar */
+    padding: 20px; /* Tambahkan padding */
+}
+
+.search-bar {
+    width: 300px; /* Lebar search bar */
+    display: flex; /* Gunakan Flexbox */
+    justify-content: center; /* Pusatkan teks */
+    align-items: center; /* Pusatkan ikon */
+    background: transparent; /* Latar belakang transparan */
+    border: 1px solid #bfbfbf; /* Tambahkan border */
+    border-radius: 30px; /* Buat sudut membulat */
+    padding: 8px 15px; /* Tambahkan padding */
+    margin-bottom: 15px; /* Tambahkan jarak ke bawah */
+}
+
+.search-bar input {
+    width: 500px;
+    padding: 8px;
+    border-radius: 30px;
+    background: transparent;
+    color: inherit;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-bar input::placeholder {
+    color: inherit;
+}
+
+.suggestions {
+    background: transparent; /* Latar belakang transparan */
+    padding: 15px; /* Tambahkan padding */
+    border: 1px solid #bfbfbf; /* Tambahkan border */
+    border-radius: 10px; /* Buat sudut membulat */
+    margin-bottom: 10px; /* Beri jarak ke bawah */
+    width: 300px; /* Tentukan lebar */
+}
+
+.suggestion {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+}
+
+.suggestion:last-child {
+    border-bottom: none;
+}
+
+.suggestion-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 80px;
+    margin-right: 10px;
+}
+
+.suggestion-info {
+    flex: 1;
+}
+
+.suggestion-info p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.follow-btn {
+    background: white;
+    color: black;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.show-more {
+    display: block;
+    color: #1d9bf0;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.trending {
+    background: transparent; /* Latar belakang transparan */
+    padding: 15px; /* Tambahkan padding */
+    border: 1px solid #bfbfbf; /* Tambahkan border */
+    border-radius: 10px; /* Buat sudut membulat */
+    width: 300px; /* Lebar yang sama dengan saran */
+    color: inherit; /* Warna mengikuti elemen induk */
+}
+
+.trending h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.trending-item {
+    border-bottom: 1px solid #333; /* Garis pemisah */
+    padding: 10px 0;
+}
+
+.trending-item:last-child {
+    border-bottom: none; /* Hilangkan garis pemisah di elemen terakhir */
+}
+
+.trending-item small {
+    color: gray;
+    font-size: 12px;
+}
+
+.trending-item p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 4px 0;
+}
+
+.trending-item span {
+    font-size: 14px;
+    color: #aaa;
+}
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 25px;
+    padding: 16px;
+    position: fixed;
+    z-index: 101;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+}
+/* Style untuk modal/popup */
+.posting-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay lebih gelap */
+    z-index: 1001;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #000; /* Latar belakang hitam */
+    border-radius: 16px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    color: #fff; /* Teks putih */
+}
+
+.modal-header {
+    padding: 20px;
+    border-bottom: 1px solid #2f3336; /* Garis pemisah abu-abu gelap */
+    position: relative;
+}
+.close-btn {
+    position: absolute;
+    right: 16px;
+    top: 12px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #ffffff; /* Warna biru Twitter/X */
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.close-btn:hover {
+    background-color: #031018; /* Hover biru sangat gelap */
+}
+
+.modal-body {
+    padding: 16px;
+}
+
+/* .audience-selector {
+    display: inline-block;
+    background-color: #1d9bf0; 
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    cursor: pointer;
+} */
+
+.post-input {
+    width: 100%;
+    min-height: 100px;
+    border: none;
+    resize: none;
+    font-size: 18px;
+    outline: none;
+    font-family: inherit;
+    margin-bottom: 16px;
+    background-color: transparent;
+    color: #fff; /* Teks putih */
+}
+
+.post-input::placeholder {
+    color: #71767b; /* Placeholder abu-abu */
+}
+
+.modal-footer {
+    padding: 12px 16px;
+    border-top: 1px solid #2f3336; /* Garis pemisah abu-abu gelap */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.post-submit {
+    background-color: #ffffff; /* Warna biru Twitter/X */
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 50px;
+    padding: 8px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.post-submit:disabled {
+    background-color: #cfcfcf; /* Biru lebih gelap saat disabled */
+    cursor: not-allowed;
+}
