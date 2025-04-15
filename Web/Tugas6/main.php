@@ -176,72 +176,7 @@ if ($row = pg_fetch_assoc($result)) {
                     </div>
                 </div>                
     </div>
-    <!-- Modal Popup -->
-    <!-- <div id="postModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <textarea placeholder="What’s happening?" rows="4"></textarea>
-            <button class="send-post">Post</button>
-        </div>
-    </div> -->
-
-<!-- <script>
-    const postBtn = document.querySelector('.postBTN');
-    const modal = document.getElementById('postModal');
-    const closeBtn = document.querySelector('.close');
-    const sendBtn = document.querySelector('.send-post');
-    const toast = document.getElementById('toast');
-
-    postBtn.addEventListener('click', () => {
-        modal.style.display = 'block';
-    });
-
-    closeBtn.addEventListener('click', () => {
-        modal.style.display = 'none';
-    });
-
-    window.addEventListener('click', (e) => {
-        if (e.target == modal) {
-            modal.style.display = 'none';
-        }
-    });
-
-    sendBtn.addEventListener('click', () => {
-        const textarea = modal.querySelector('textarea');
-        const content = textarea.value.trim();
-
-        if (content !== "") {
-            // Buat elemen post baru
-            const newPost = document.createElement('div');
-            newPost.className = 'post';
-            newPost.innerHTML = `
-                <div class="post-header">
-                    <img src="path/to/profile.jpg" alt="Profile" class="profile-img">
-                    <div>
-                        <b>ssal</b> @njmgrl · just now
-                    </div>
-                </div>
-                <div class="post-content">${content}</div>
-            `;
-
-            // Sisipkan ke feed paling atas (asumsikan kamu punya kontainer feed)
-            const postContainer = document.querySelector('.post-container'); // ganti selector sesuai punyamu
-            postContainer.prepend(newPost);
-
-            // Tampilkan notifikasi
-            toast.classList.add("show");
-            setTimeout(() => {
-                toast.classList.remove("show");
-            }, 3000);
-
-            // Reset dan tutup modal
-            textarea.value = "";
-            modal.style.display = 'none';
-        }
-    });
-</script> -->
-
-
+ 
 <!-- Toast Notification -->
 <!-- <div id="toast" class="toast">Post berhasil di-upload!</div> -->
 <div class="posting-modal" id="postingModal">
